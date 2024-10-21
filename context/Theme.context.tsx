@@ -1,12 +1,8 @@
+import { COLOR_SCHEMES, Theme } from "@/constants/Colors";
 import { getRandomColor } from "@/utils/getRandomColor";
 import { createContext, useState, useContext, ReactNode } from "react";
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-
-export type Theme = {
-  background: string;
-  text: string;
-};
 
 type ThemeProviderProps = {
   children: ReactNode;
@@ -17,8 +13,10 @@ type ThemeContextType = {
   toggleTheme: () => void;
 };
 
+const deafultTheme = COLOR_SCHEMES[12];
+
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState<Theme>(getRandomColor());
+  const [theme, setTheme] = useState<Theme>(deafultTheme);
 
   const toggleTheme = () => {
     setTheme(getRandomColor());

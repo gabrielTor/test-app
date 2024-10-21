@@ -1,6 +1,6 @@
-import { COLOR_SCHEMES } from "@/constants/Colors";
+import { COLOR_SCHEMES, Theme } from "@/constants/Colors";
 
-export const getRandomColor = (): { background: string; text: string } => {
+export const getRandomColor = (): Theme => {
   const randomIndex: number = Math.floor(Math.random() * COLOR_SCHEMES.length);
 
   return COLOR_SCHEMES[randomIndex];

@@ -26,7 +26,7 @@ export default function RootLayout() {
     <ThemeProvider>
       <Stack>
         <Stack.Screen name="index" options={options} />
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="+not-found" options={options} />
       </Stack>
     </ThemeProvider>
   );

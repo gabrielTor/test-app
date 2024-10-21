@@ -18,5 +18,5 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   welcome: { fontSize: 30, textAlign: "center" },
-  helperText: { fontSize: 15, marginTop: 10 },
+  helperText: { fontSize: 15, padding: 10, textAlign: "center" },
 });

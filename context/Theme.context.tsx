@@ -18,9 +18,7 @@ const deafultTheme = COLOR_SCHEMES[12];
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<Theme>(deafultTheme);
 
-  const toggleTheme = () => {
-    setTheme(getRandomColor());
-  };
+  const toggleTheme = () => setTheme(getRandomColor);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
